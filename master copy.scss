@@ -2,48 +2,28 @@ $icolor : steelblue;
 $backcolor0: lightsteelblue;
 $backcolor1: lightyellow;
 $backcolor2: lavender;
-$hovercolor: palegoldenrod;
 
+head {text-align: center;}
 body {background-color: $backcolor0;}
-%fshare {font-family:"Arial";}
-
-h1 {
-  @extend %fshare;
-    color: $hovercolor;
-
-    }
-
-h2,h3,h4,h5,h6 {
-  @extend %fshare;
-  color: $icolor;
-}
-@media only screen and (max-width: 600px) {
-  body {
-    font-family:"Arial Narrow", sans-serif;
-    background-color: lightblue;
-  }
-}
-//*html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}*//
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 .icon-bar {
-    width: 100%;
-    background-color: $backcolor1;
-    overflow: auto;
-
-    a {
-      float: left;
-      width: 25%;
-      text-align: center;
-      padding: 12px 0;
-      transition: all 0.3s ease;
-      color: white;
-      font-size: 36px;
-    }
-    a:hover {
-      background-color: $hovercolor;
-    }
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
 }
-
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+.icon-bar a:hover {
+  background-color: $backcolor1;
+}
 .active {
   background-color: $backcolor2;
 }
@@ -82,4 +62,28 @@ ul{
   ul{
     color: $icolor;
   }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
